@@ -1,0 +1,50 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { LineChart, Database } from 'lucide-react';
+
+const projects = [
+  {
+    icon: LineChart,
+    title: "Annual Survey of Females in AI, DL, and ML",
+    description: "Comprehensive research study tracking the representation and impact of women in artificial intelligence, deep learning, and machine learning fields.",
+  },
+  {
+    icon: Database,
+    title: "Non-profit Organizations Database",
+    description: "Curated database of organizations focused on supporting women in healthcare, life sciences, medicine, and STEM fields.",
+  }
+];
+
+const Projects = () => {
+  return (
+    <div className="pt-24 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl font-bold text-center mb-12 text-purple-900"
+        >
+          Our Projects
+        </motion.h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2 }}
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <project.icon className="h-12 w-12 text-purple-600 mb-4" />
+              <h2 className="text-2xl font-semibold mb-4 text-purple-900">{project.title}</h2>
+              <p className="text-gray-600">{project.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
