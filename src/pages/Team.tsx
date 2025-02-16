@@ -1,10 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Users, Code, Linkedin } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import { Users, Code } from 'lucide-react';
+>>>>>>> 482bbe777b16166198126b1a01e07ace311fb80c
 
 const teamMembers = {
   leadership: [
     {
       name: "James Gillespie",
+<<<<<<< HEAD
       role: "President",
       image: "./M.James.png",
       linkedin: "https://www.linkedin.com/in/jamesjgillespie/"
@@ -20,27 +26,41 @@ const teamMembers = {
       role: "Director of Operations",
       // image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80",
       linkedin: "https://www.linkedin.com/in/ryder-erman/"
+=======
+      role: "Leadership",
+>>>>>>> 482bbe777b16166198126b1a01e07ace311fb80c
     }
   ],
   technology: [
     {
       name: "Hussain Syed",
+<<<<<<< HEAD
       role: "Technology Lead",
       // image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80"
+=======
+      role: "Technology",
+>>>>>>> 482bbe777b16166198126b1a01e07ace311fb80c
     },
     {
       name: "Aasrith",
       role: "Technology",
+<<<<<<< HEAD
       // image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80"
+=======
+>>>>>>> 482bbe777b16166198126b1a01e07ace311fb80c
     },
     {
       name: "Koshel",
       role: "Technology",
+<<<<<<< HEAD
       // image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80"
+=======
+>>>>>>> 482bbe777b16166198126b1a01e07ace311fb80c
     }
   ]
 };
 
+<<<<<<< HEAD
 const TeamMemberCard = ({ member, isLeadership = false }) => {
   return (
     <div className="group relative">
@@ -119,6 +139,71 @@ const Team = () => {
             ))}
           </div>
         </section>
+=======
+const Team = () => {
+  return (
+    <div className="pt-24 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl font-bold text-center mb-12 text-purple-900"
+        >
+          Our Team
+        </motion.h1>
+
+        {/* Leadership Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-16"
+        >
+          <div className="flex items-center mb-8">
+            <Users className="h-8 w-8 text-purple-600 mr-4" />
+            <h2 className="text-3xl font-semibold text-purple-900">Leadership</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {teamMembers.leadership.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">{member.name}</h3>
+                <p className="text-purple-600">{member.role}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Technology Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="flex items-center mb-8">
+            <Code className="h-8 w-8 text-purple-600 mr-4" />
+            <h2 className="text-3xl font-semibold text-purple-900">Technology</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {teamMembers.technology.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">{member.name}</h3>
+                <p className="text-purple-600">{member.role}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+>>>>>>> 482bbe777b16166198126b1a01e07ace311fb80c
       </div>
     </div>
   );
