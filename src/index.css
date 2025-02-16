@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
 
 @keyframes fadeIn {
   from {
@@ -40,5 +39,3 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
 }
-=======
->>>>>>> 482bbe777b16166198126b1a01e07ace311fb80c
