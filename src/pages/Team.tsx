@@ -20,26 +20,33 @@ const teamMembers = {
     {
       name: "Mikaela Morelli",
       role: "Executive Director",
+      image: "./Mikaela Morelli.jpg",
       linkedin: "https://www.linkedin.com/in/mikaelamorelli"
     },
     {
       name: "Ryder Erman",
       role: "Director of Operations",
+      image: "./Ryder Erman.jpg",
       linkedin: "https://www.linkedin.com/in/ryder-erman/"
     }
   ],
   technology: [
     {
       name: "Hussain Syed",
-      role: "Technology Lead"
+      role: "Technology Lead",
+      image: "./Hussain Syed.jpg",
+      linkedin: "https://www.linkedin.com/in/hussainn7/"
     },
     {
-      name: "Aasrith",
-      role: "Technology"
+      name: "Aasrith Ravulapati",
+      role: "Technology",
+      linkedin: "https://www.linkedin.com/in/aasrith-ravulapati-5463b426b/"
     },
     {
-      name: "Koshel",
-      role: "Technology"
+      name: "Koshel Sharma",
+      role: "Technology",
+      image: "./Koshel Sharma.jpg",
+      linkedin: "https://www.linkedin.com/in/koshel-sharma-4450642a0/"
     }
   ]
 };
@@ -47,9 +54,10 @@ const teamMembers = {
 interface TeamMemberCardProps {
   member: TeamMember;
   isLeadership?: boolean;
+  isTechnology?: boolean;
 }
 
-const TeamMemberCard = ({ member, isLeadership = false }: TeamMemberCardProps) => {
+const TeamMemberCard = ({ member, isLeadership = false, isTechnology = true }: TeamMemberCardProps) => {
   return (
     <div className="group relative">
       {/* Circular image with gradient border */}
@@ -69,7 +77,7 @@ const TeamMemberCard = ({ member, isLeadership = false }: TeamMemberCardProps) =
         <h3 className="text-xl font-semibold text-purple-900 mb-2">{member.name}</h3>
         <p className="text-purple-600 mb-4">{member.role}</p>
         
-        {isLeadership && member.linkedin && (
+        {isLeadership && member.linkedin && isTechnology==false && (
           <a
             href={member.linkedin}
             target="_blank"
@@ -79,6 +87,18 @@ const TeamMemberCard = ({ member, isLeadership = false }: TeamMemberCardProps) =
             <Linkedin className="h-5 w-5 text-purple-600" />
           </a>
         )}
+
+        {isTechnology && member.linkedin && isLeadership==false &&(
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center w-10 h-10 bg-purple-100 rounded-full hover:bg-purple-200 transition-colors duration-300"
+          >
+            <Linkedin className="h-5 w-5 text-purple-600" />
+          </a>
+        )}
+
       </div>
 
       {/* Decorative elements */}
@@ -122,7 +142,7 @@ const Team = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <TeamMemberCard member={member} isLeadership={true} />
+                <TeamMemberCard member={member} isLeadership={true} isTechnology={false} />
               </motion.div>
             ))}
           </div>
@@ -149,8 +169,8 @@ const Team = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <TeamMemberCard member={member} />
-              </motion.div>
+                <TeamMemberCard member={member} isTechnology={true} isLeadership={false} />
+                </motion.div>
             ))}
           </div>
         </motion.section>

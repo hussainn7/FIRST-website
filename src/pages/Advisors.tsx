@@ -3,55 +3,64 @@ import { motion } from 'framer-motion';
 
 const advisors = [
   {
-    name: "Alexis Balashov",
-    position: "Incoming @ BlackRock",
-    education: "Economics @ UC Berkeley",
-    linkedin: "https://www.linkedin.com/in/alexis-balashov/",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+    "name": "Eni Agollari",
+    "position": "Double Major",
+    "education": "Neuroscience & Behavior and French & Francophone Studies, University of Notre Dame",
+    "linkedin": "https://www.linkedin.com/in/eni-agollari-b879a5285/",
+    "image": "./Eni Agollari.jpg"
+    // "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
+
   },
   {
-    name: "Elif Sen",
-    position: "Growth @Estuary",
-    education: "Columbia University",
-    linkedin: "https://www.linkedin.com/in/elifcsen",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80"
+    "name": "Alexis Balashov",
+    "position": "Incoming @ BlackRock",
+    "education": "Economics @ UC Berkeley",
+    "linkedin": "https://www.linkedin.com/in/alexis-balashov/",
+    "image": "./Alexis Balashov.jpg"
+    // "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
   },
   {
-    name: "Eni Agollari",
-    position: "Double Major",
-    education: "Neuroscience & Behavior and French & Francophone Studies, University of Notre Dame",
-    linkedin: "https://www.linkedin.com/in/eni-agollari-b879a5285/",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
+    "name": "Dimitra Charalampopoulou",
+    "position": "Data Scientist | Software Engineer",
+    "education": "Intel | MsBA, Data Science @ USC",
+    "linkedin": "https://www.linkedin.com/in/dimitra-haralampopoulou",
+    "image": "./Dimitra Charalampopoulou.jpg"
+    // "image": "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&q=80"
   },
   {
-    name: "Gina Leech",
-    position: "Student",
-    education: "Economics & Finance UC San Diego | Class of 2026",
-    linkedin: "https://www.linkedin.com/in/gina-leech",
-    image: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?auto=format&fit=crop&q=80"
+    "name": "Gina Leech",
+    "position": "Student",
+    "education": "Economics & Finance UC San Diego | Class of 2026",
+    "linkedin": "https://www.linkedin.com/in/gina-leech",
+    "image": "./Gina Leech.jpg"
+    // "image": "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?auto=format&fit=crop&q=80"
   },
   {
-    name: "Katherine Kirsch",
-    position: "Venture Associate",
-    education: "Red Cedar Ventures",
-    linkedin: "https://www.linkedin.com/in/hello-katiekirsch",
-    image: "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=80"
+    "name": "Katherine Kirsch",
+    "position": "Venture Associate",
+    "education": "Red Cedar Ventures",
+    "linkedin": "https://www.linkedin.com/in/hello-katiekirsch",
+    "image": "./Katherine Kirsch.jpg"
+    // "image": "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=80"
   },
   {
-    name: "Rose Reeb",
-    position: "Investment Banking Associate",
-    education: "Morgan Stanley",
-    linkedin: "https://www.linkedin.com/in/rosereeb",
-    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80"
+    "name": "Rose Reeb",
+    "position": "Investment Banking Associate",
+    "education": "Morgan Stanley",
+    "linkedin": "https://www.linkedin.com/in/rosereeb",
+    "image": "./Rose Reeb.jpg"
+    // "image": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80"
   },
   {
-    name: "Dimitra Charalampopoulou",
-    position: "Data Scientist | Software Engineer",
-    education: "Intel | MsBA, Data Science @ USC",
-    linkedin: "https://www.linkedin.com/in/dimitra-haralampopoulou",
-    image: "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&q=80"
+    "name": "Elif Sen",
+    "position": "Growth @Estuary",
+    "education": "Columbia University",
+    "linkedin": "https://www.linkedin.com/in/elifcsen",
+    "image": "./Elif Sen.jpg"
+    // "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80"
   }
 ];
+
 
 const Advisors = () => {
   return (
@@ -61,7 +70,7 @@ const Advisors = () => {
         animate={{ opacity: 1, y: 0 }}
         className="text-4xl font-bold text-center mb-12 text-purple-900"
       >
-        Our Advisors
+        Our Event Advisors
       </motion.h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

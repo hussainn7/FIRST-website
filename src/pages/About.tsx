@@ -22,19 +22,19 @@ const About = () => {
             {
               icon: Target,
               title: "Mission",
-              content: "To empower and support women in research, science, and technology fields through community, education, and opportunities.",
+              content: "To empower women entrepreneurs, executives, investors, researchers, scientists, and technologists in STEM, driving growth, innovation, and success across AI, healthcare, life sciences, and technology.",
               image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80"
             },
             {
               icon: Lightbulb,
               title: "Vision",
-              content: "A world where women are equally represented and leading innovation in STEM fields across all sectors.",
+              content: "To create a leading global community dedicated to helping women excel as leaders and innovators in STEM.",
               image: "https://images.unsplash.com/photo-1571624436279-b272aff752b5?auto=format&fit=crop&q=80"
             },
             {
               icon: Goal,
               title: "Objectives",
-              content: "Create networking opportunities, provide mentorship, and facilitate knowledge sharing among women in STEM.",
+              content: "Creating networking opportunities for women and allies in STEM.Fostering collaboration through impactful events, programs, and research initiatives. Enhancing access to resources that drive innovation and career advancement.",
               image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
             }
           ].map((item, index) => (
